@@ -15,7 +15,7 @@ define subb = Character("Subject 163", color="#b8a1d6")
 
 label start:
     $ player_name = ""
-    $ player_name = renpy.input("Please input a username. Please note that this name will e used throughout the entire visual novel:")
+    $ player_name = renpy.input("Please input a username. Please note that this name will be used throughout the entire visual novel:")
     a "Hey"
     "I awoke to the familiar buzzing of the facility."
     "Trying to ignore the faint buzzing, I shifted on the hard mattress, my bodyaching from the intense muscle-testing-training I had done the day before."
@@ -145,8 +145,23 @@ label start:
                     "A safe feeling washed over me before I snapped back to reality."
                     m "\"Hide hide hide... But there's only grass-\""
                     "My eyes flittered around to find a potential hiding spot, but the only place that would be reasonable was to get over to the forest."
-                    "Thinking about how I was weakened by my symptoms and about the time that was ticking away, I started to enter a state of panic.\n• Get to the trees as fast as possible \n• Jump off the nearby cliff and try to glide to safety"
-                    
+                    menu:
+                                "Thinking about how I was weakened by my symptoms and about the time that was ticking away, I started to enter a state of panic."
+                                
+                                "Get to the trees as fast as possible":
+                                    "Deciding that my best option was to get to the trees, I sprinted. Or at least I tried to."
+                                    "Adrenaline trudged through my veins, making me rush when my body was already weak, causing me to stumble."
+                                    "I knew that I was gonna fall, my muscles would give up on me soon and I would lay there like dead prey, waiting to be picked off by the crows."
+                                    # Blank screen
+                                    "The trees were only a couple yards away now, but I couldn't even feel my limbs anymore."
+                                    "{i}Keep going, almost there, don't fail on me!{/i}"
+                                    "The next thing I knew, I face-planted into the ground."
+                                    "I flailed, trying to get back up, but I had no controll over my arms and legs anymore."
+                                    "I sat there, defeated."
+                                    "Closing my eyes, I let my consciousness go and faded away into the darkness, knowing the next time I would wake up would be met with severe consequences."
+                                "Jump off the nearby cliff and glide to safety":
+                                    "Test"
+                                    
                 "Know that the head of Zerithin would be outraged if they found out":
                     "Test"
 
