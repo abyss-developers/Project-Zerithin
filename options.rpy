@@ -18,18 +18,18 @@ define config.name = _("Project Zerithin")
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## The version of the game.
 
-define config.version = "1.0"
+define config.version = "Version 1.0"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""
+define gui.about = _p("""{i}Fonts used is apart of the Futura family.{/i}\nWelcome to Project Zerithin! This is Enrica's product! (Also, hi! It's Jason :D)
 """)
 
 
@@ -61,7 +61,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "Almost_Done.mp3"
 
 
 ## Transitions #################################################################
