@@ -9,28 +9,51 @@ define s = Character("{b}Security Bot{/b}",  color="#1b77ee")
 define c = Character("Crawler",  color="#bff3d6")
 define suba = Character("Subject 130", color="#bfe8f3")
 define subb = Character("Subject 163", color="#b8a1d6")
+define q = Character("Qar", color="#FF7070")
 
 
 # The game starts here.
 
 label start:
     $ player_name = ""
-    $ player_name = renpy.input("Please input a username. Please note that this name will be used throughout the entire visual novel:")
-    a "Hey"
+    play music "Tune_Leaps.mp3"
+    $ player_name = renpy.input("Please input a username. Please note that this name will be used throughout the entire visual novel:") 
+    q "As this is a small sample, this was made under the span of two weeks, which is clearly not ideal to make a quality product."
+    
+    
+    
+    q "Because of that, a donation of at least $500000000000000000 is {i}{b}{u}REQUIRED{/i}{/b}{/u} to view the content shown to you know. Failure to comply with the tax will put you in federal prison. (-Jason, the programmer of this visual novel.)"
+    q "Ehem, aside from the point, because of the time constraint put upon us, the product you see below may not be the best quality it could be."
+    q "Thank you for understanding, now let us introduce you to the characters."
+    q "You will be placed in the shoes of a character named Dorine Finch, known as Subject 185. but as this should be a customizable experience, you can enter the name of what you want to go by in this simulation."
+    q "For example here, let's see an example slide."
+    m "\"Hey, this is what the template looks like :D\""
+    q "As you can see, your inputted name is set to the upper hand corner, and although you won't be called by the name of whatever you inputted, you might see some sneak peaks later if you choose to support me and my friends on our universe-building journey."
+    q "Let us carry on now."
+    q "You are set in the yaer 2122. Only 19 years before, mankind seeked to create a specialized kind of \"human\" that had access to powers the average human could not possess."
+    q "The secret organization that created these \"humans\" goes by the name of Zerithin. They classify this project as 2103: Avrin, 2103 being the year these so called avrins were created."
+    q "Now that you have some background info on our story universe, let's jump right into the actual product."
+    # heheh flashy uwu
+    
+    
+    call credits
+
+    a "System booting: Subject 185. Status: Awakening."
     "I awoke to the familiar buzzing of the facility."
-    "Trying to ignore the faint buzzing, I shifted on the hard mattress, my bodyaching from the intense muscle-testing-training I had done the day before."
+    "Trying to ignore the faint buzzing, I shifted on the hard mattress, my body aching from the intense muscle-testing-training I had done the day before."
     "This had been the 5th time they had done the experiments and I was getting TIRED of it, especially because I would always end up passing out or get stuck with a horrible migrane."
     "Unable to sleep cause light-sleeper issues, I groaned and resigned by turning my head towards the electro-cuffs, 4 in total, one at the end of each limb."
     "A few quiet moments pass and I hear the monotone, lifeless voice that signaled that the Archo2 had figured out that I was awake."
-    a "Welcome back. Subject 185. I hope your rest was well, be prepared for more training today. Initiating wake up protocol."
+    a "Welcome back, Subject 185. I hope your rest was well, be prepared for more training today. Initiating wake up protocol."
     "The cuffs reclined into their slots with a small click, allowing me to stretch my sore body."
     m "\"Ugh, time for another exhausting day..\" I hissed under my breath as the monitors swiveled, catching every uttered word."
     "I grab my clothes and head into the provided bathroom, changing into the hoodie I got from the head of Zerithin's secret corporation."
     "After washing my face, I rubbed my dripping face into the sleeve of my oversized hoodie."
-    "Looking into the mirror, I saw a darker-skinned girl with freckles, the color slowly draining out of her face as every day passed with suffering."
-    "But what could she do when she was stuck miles in the middle of nowhere?"
+    "Looking into the mirror, I saw a disheartened individual, the color slowly draining out of their face as every day passed with suffering."
+    "But what could they do when they were stuck miles in the middle of nowhere?"
+    "Shaking my head, I ventured towards the door of my room."
     menu:
-                "I stumbled out into the hallway, deciding upon two options I could take."
+                "Taking a hold of my doorknob, I opened the door and stumbled out into the hallway, deciding upon two choices I could take."
                 
                 "Challenge myself to blindly find my way to the cafeteria using my enhanced senses":
                     "I closed my eyes and relied on my sense of hearing and scent to guide me to the cafeteria."
@@ -38,19 +61,21 @@ label start:
                     # Black sprite shakes and jolts
                     "I wrinkled my nose and looked up to see Crawler's annoyingly radiant smiling face at me."
                     c "\"Oh hey, Subject 186.\""
-                    c "\"Good to see that you're out and about. I didn't think anybody was here in the corridors, but it sure seems that the training you've been doing is paying off,\" he winked at me."
+                    c "\"Good to see that you're out and about. I didn't think anybody was here in the corridors, seemed all too quiet, but it sure seems that the training you've been doing is paying off,\" he winked at me."
                     m "I looked away, giving a small shrug."
-                    c "\"Well, meet me back at your room after you've eaten and I'll come fetch you for your Enhanced-Sense-Training.\" He pats my shoulder comfortingly."
-                    c "\"I'll try to make your training better to the best of my abilities,\" he mumured gently. \"I know how much you hate them.\""
+                    c "\"Well, meet me back at your room after you've eaten and I'll come fetch you for your Enhanced-Sense-Training.\" He patted my shoulder comfortingly."
+                    c "\"I'm currently trying to adjust your training system.\" he mumured gently. \"I know how much you hate the way the boss does things around here.\""
                     c "\"Well, off to breakfast you go!\" With that, he turned his back and left me alone in the facility hallway, on my way to breakfast."
                 "Walk down the hallway as usual":
-                    "Choosing not to make a fool of myself again, I put my hands in my pocket and made my way through the winding complex, now in a slightly more irritated-fashion."
-                    "My steps pattered against the metal floor, the echos rattling inside my brain like bouncy balls."
+                    "Choosing not to make a fool of myself again, I put my hands in my pocket and made my way through the winding complex, now in a slightly more irritated-stance."
+                    "My steps pattered against the metal floor, the echos rattling inside my brain like those rubbery bouncy balls that people played with all the way in the '19s."
                     "A shiver crawled down my spine, creeping to the tip of my tail as the faint memories of the {i}incident{/i} darted into my conciousness."
                     # *short moment, flashes of red (not neccisarily blood lmao) and hazy vision, shaking screen, jolting*
-                    "Pushing away the violent memories that were better left untouched, I dragged myself down the hall, closing my eyes for a brief moment and taking a deep breath.."
+                    "Feeling my body tremble, I forced myself to push away the violent moments, knowing it was better to leave untouched."
+                    "Dragging myself down the hall, I closed my eyes for a brief moment and took a deep breath for every thought that harmed my mind."
                     m "\"It's alright, just forget about it. It doesn't matter now..\""      
-
+                    
+    play music "doneee.mp3"
     "Finally seeing the entrance of the dining hall, I walked in to 163 shoving his face with weird green mush, whilst 130 sat there, facing me as I showed myself."
     # Have Subject 130 come into the left, and then:
     suba "\"Welcome 185. I was expecting you.\""
@@ -70,7 +95,7 @@ label start:
                     # 130 Neutral, 163 Eating
                     "Trying to find the right moment to say anything, I try to think of something to say, only to make my heart race faster than it usually would. {i}I guess I won't say anything today..{/i}"
                     "Scraping the rest of the oatmeal off my bowl, I placed my plate into the sink."
-                    "Taking one last look atthe duo, I walk away, heading towards my room."
+                    "Taking one last look at the duo, I walk away, heading towards my room."
                 "Try to start a conversation with 130":
                     # 130 Pained
                     "Pushing myself togo talk to 130, I lifted my head, only to see 130's eyes start flickering in their sockets."
@@ -97,31 +122,36 @@ label start:
                     # 130 neutral sprite
                     "130 seemed deep in thought."
                     suba "\"I don't think I've heard her usual anxious thoughts around, though my mind's definitely clearer without her.\""
-                    m "I scoff. \"When I find her, I'm definitely telling her that.\""
+                    m "I scoff."
+                    m "\"When I find her, I'm definitely telling her that.\""
                     suba "\"You better not.\""
                     m "\"No promises!\" I exclaimed as I dumped my bowl into the sink and left."
     "Walking into the hallway, I'm approached by a security bot."
     "It stood tall above me, turning its head down to scan me."
     s "\"Halt. Starting a scan.\""
+    # Blank Slide
     s "\"Scanning... Subject identified. Subject 185. Encounter noted. You may resume activity.\""
     "Taking my leave, I listen yet again to the pitter patter of my footsteps."
     menu:
-                "Passing through the same hallway I did about 30 minute ago, I realize a door was left open where it wasn't before."
+                "Passing through the same hallway I did about 10 minutes ago, I realize a door was left open where it wasn't before."
                 
                 "Check it out":
                     "Scanning the perimeters of my door, I peered my head into the area, only to find a big room with a staircase that went on past my vision."
+                    "Familiarizing myself with the area, I remembered trespassing into a place like this before."
+                    "Memories of trying to escape the suffocating facility of Zerithin whirred in my mind, being monitored all-day and all-night after my escape attempt."
+                    "Nobody was stopping me now."
                     "Taking one last peek into the hallway to ensure no one was looking, I entered while gazing up at the tall stairway."
                     "I started the climb by running up the first initial steps."
                     "Halfway up the maybe, 10th flight of stairs, I remembered the security cameras."
-                    m "\"Oh frick..\" I covered my face with my hand, disappointed that I didn't realize sooner."
-                    m "\"Well, too late now, isn't it? Just another reason for me to get to the top of these stairs ASAP.\""
+                    m "\"Oh frick..\" I slapped my face, disappointed that I didn't realize sooner."
+                    m "\"Well, too late now, isn't it?\" I muttered, rolling my eyes. \"Just another reason for me to get to the top of these stairs ASAP.\""
                     "Running a couple more flights, I saw that I only had a few more levels to go."
-                    "Hastening my pace, seconds later my side started to hurt, a faint throbbing in my head."
+                    "Hastening my pace, I was nearing the top when my side started to hurt, a faint throbbing in my head."
                     m "\"You've got to be kidding me..\" I grimaced as I clutched my side."
                     "Pushing myself to get to the top, I accidentally tripped and stumbled upon the hard-edge stone stairs."
                     # Sceren shakes
                     m "\"Ugh-\""
-                    "Rubbing the arm that fell against the edge, I quickly propped my body against the wall as something to lean upon."
+                    "Rubbing the arm that fell against the edge, I pursed my lips, pushing against the wall to prop my body upright."
                     "Taking a deep breath in, I limped up the rest of the way, the pain in my head worsening with every movement."
                     "Putting step upon step, slight anticipation drove through my body as I was met with a trapdoor."
                     "The only time I had ever seen a trapdoor was when Crawler lowered himself down into the supervisor room so that he could monitor me from a bottom-up perspective."
@@ -144,7 +174,8 @@ label start:
                     "The familiar scenary of grass filled my vision, trees lining the distance."
                     "A safe feeling washed over me before I snapped back to reality."
                     m "\"Hide hide hide... But there's only grass-\""
-                    "My eyes flittered around to find a potential hiding spot, but the only place that would be reasonable was to get over to the forest."
+                    "My eyes flittered around to find a potential hiding spot, but the only place that would be reasonable was to get over to the forest or jump off a cliff and hope for the best."
+                    "Such great options to be met with."
                     menu:
                                 "Thinking about how I was weakened by my symptoms and about the time that was ticking away, I started to enter a state of panic."
                                 
@@ -156,11 +187,15 @@ label start:
                                     "The trees were only a couple yards away now, but I couldn't even feel my limbs anymore."
                                     "{i}Keep going, almost there, don't fail on me!{/i}"
                                     "The next thing I knew, I face-planted into the ground."
-                                    "I flailed, trying to get back up, but I had no controll over my arms and legs anymore."
+                                    "I flailed, trying to get back up, but I had no control over my arms and legs anymore."
                                     "I sat there, defeated."
                                     "Closing my eyes, I let my consciousness go and faded away into the darkness, knowing the next time I would wake up would be met with severe consequences."
+                                    # END SECTOR
                                 "Jump off the nearby cliff and glide to safety":
-                                    "Test"
+                                    "Deciding that the best option would be to jump off the cliff and try to glide my way down, I scurried over towards the cliff."
+                                    "Halting yards from the actual edge is an extra precaution due to my current physical state, I stretched my wings and help them up shakily."
+                                    "The wind swept through and under my wings, shaking the membranes between my fingers."
+                                    "It seemed strong enough to support me on the way down."
                                     
                 "Know that the head of Zerithin would be outraged if they found out":
                     "Test"
