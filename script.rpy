@@ -10,6 +10,8 @@ define c = Character("Crawler",  color="#bff3d6")
 define suba = Character("Subject 130", color="#bfe8f3")
 define subb = Character("Subject 163", color="#b8a1d6")
 define q = Character("Qar", color="#FF7070")
+define y = Character("???", color="#FF7070")
+default pathd = False
 
 
 # The game starts here.
@@ -34,15 +36,12 @@ label start:
     q "The secret organization that created these \"humans\" goes by the name of Zerithin. They classify this project as 2103: Avrin, 2103 being the year these so called avrins were created."
     q "Now that you have some background info on our story universe, let's jump right into the actual product."
     # heheh flashy uwu
-    
-    
-    call credits
 
     a "System booting: Subject 185. Status: Awakening."
     "I awoke to the familiar buzzing of the facility."
-    "Trying to ignore the faint buzzing, I shifted on the hard mattress, my body aching from the intense muscle-testing-training I had done the day before."
+    "Trying to ignore the faint buzzing, I shifted as much as I could on the hard mattress, my body aching from the intense muscle-test training I had done the day before."
     "This had been the 5th time they had done the experiments and I was getting TIRED of it, especially because I would always end up passing out or get stuck with a horrible migrane."
-    "Unable to sleep cause light-sleeper issues, I groaned and resigned by turning my head towards the electro-cuffs, 4 in total, one at the end of each limb."
+    "Unable to sleep because of my light-sleeper issues, I groaned and resigned by turning my head towards the electro-cuffs, 4 in total, one at the end of each limb."
     "A few quiet moments pass and I hear the monotone, lifeless voice that signaled that the Archo2 had figured out that I was awake."
     a "Welcome back, Subject 185. I hope your rest was well, be prepared for more training today. Initiating wake up protocol."
     "The cuffs reclined into their slots with a small click, allowing me to stretch my sore body."
@@ -60,10 +59,10 @@ label start:
                     "Only when I turned a corner did I bump into something- or rather {i}someone.{/i}"
                     # Black sprite shakes and jolts
                     "I wrinkled my nose and looked up to see Crawler's annoyingly radiant smiling face at me."
-                    c "\"Oh hey, Subject 186.\""
+                    c "\"Oh hey, Subject 86!\""
                     c "\"Good to see that you're out and about. I didn't think anybody was here in the corridors, seemed all too quiet, but it sure seems that the training you've been doing is paying off,\" he winked at me."
                     m "I looked away, giving a small shrug."
-                    c "\"Well, meet me back at your room after you've eaten and I'll come fetch you for your Enhanced-Sense-Training.\" He patted my shoulder comfortingly."
+                    c "\"Well, meet me back at your room after you've eaten and I'll come fetch you for your training.\" He patted my shoulder comfortingly."
                     c "\"I'm currently trying to adjust your training system.\" he mumured gently. \"I know how much you hate the way the boss does things around here.\""
                     c "\"Well, off to breakfast you go!\" With that, he turned his back and left me alone in the facility hallway, on my way to breakfast."
                 "Walk down the hallway as usual":
@@ -91,10 +90,10 @@ label start:
     menu:
                 "Munching on some bland mush that people consider suitable for consumption, I tried to start a conversation."
                 
-                "Find that the atmosphere is rather intimidating to say anything":
+                "Find that there's nothing on my mind at the moment":
                     # 130 Neutral, 163 Eating
-                    "Trying to find the right moment to say anything, I try to think of something to say, only to make my heart race faster than it usually would. {i}I guess I won't say anything today..{/i}"
-                    "Scraping the rest of the oatmeal off my bowl, I placed my plate into the sink."
+                    "Finding that I didn't have anything else to say to 130 or 163, I continued eating in silence."
+                    "Finishing up, I scraped the rest of the oatmeal off my bowl and into my mouth, placing my dish into the sink."
                     "Taking one last look at the duo, I walk away, heading towards my room."
                 "Try to start a conversation with 130":
                     # 130 Pained
@@ -104,7 +103,7 @@ label start:
                     m "\"Tech augs? I thought Zerithin already moved on to more natural methods like gene manipulation and specifically developed fluids, instead of tech.\""
                     suba "\"No- Sorry, wrong word. I just like to blame the tech augs, I had to use them once and they sucked like hell. But anyways, the things they've been injecting into me have been making my head hurt and apparently now my eyes won't focus.\""
                     suba "He massaged his temples, wrinkles forming on his forehead. Deciding that I should probably leave 130 in peace, I pick up my bowl and stand up."
-                    m "\"I'm going to get going. Crawler told me to get back to my room for training so I better get to that. Gonna suck like hell, but oh well I guess. Bye 130, 163.\""
+                    m "\"I'm going to get going. Crawler told me to get back to my room for training so I better get to that. Gonna be horrible, but oh well I guess. Bye 130, 163.\""
                     "130 didn't reply, but sucks for him, he's now on my {i}rude{/i} list.."
                     # SUBB (163) eating sprite
                     subb "I waved my farewells to 163 before putting away my dish and leaving the vicinity."
@@ -116,6 +115,7 @@ label start:
                     m "\"Oh alright then. I'll get going, Got to get to training with Crawler.\""
                     "Standing up, I grabbed my bowl and put it in the sink before saying my farewells."
                 "Ask where Subject 124 has been":  # PATH D
+                    $pathd = True
                     "Gathering my thoughts, I realized I hadn't seen Subject 124 around the past week."
                     "{i}I wonder where she is..{/i}"
                     m "\"Have y'all seen where 124 has been? I havent seen her for at least a week now.\""
@@ -190,24 +190,57 @@ label start:
                                     "I flailed, trying to get back up, but I had no control over my arms and legs anymore."
                                     "I sat there, defeated."
                                     "Closing my eyes, I let my consciousness go and faded away into the darkness, knowing the next time I would wake up would be met with severe consequences."
+                                    q "Sample ends."
+                                    jump credits
                                     # END SECTOR
-                                "Jump off the nearby cliff and glide to safety":
+                                "Jump off the nearby cliff and glide to safety" if pathd:
                                     "Deciding that the best option would be to jump off the cliff and try to glide my way down, I scurried over towards the cliff."
                                     "Halting yards from the actual edge is an extra precaution due to my current physical state, I stretched my wings and help them up shakily."
                                     "The wind swept through and under my wings, shaking the membranes between my fingers."
                                     "It seemed strong enough to support me on the way down."
+                                    "Starting to hear the yells of the Zerithin agents, I scurried over to the edge, wings spread."
+                                    "Taking a leap of faith, I jumped off the edge and plummeted for a couple seconds until the wind caught my wings and I soared."
+                                    "I aimed myself towards the little margin of land wrapping the cliff bottom."
+                                    "Right then and there, my side burst into an excruiciating pain."
+                                    "Before I could stop myself from faling, my body crashed into the land below, thudding into the cold rock."
+                                    "Clecnching my jaws together, I cursed in my mind."
+                                    "Just lying there for a moment to catch my breath, I stared at the slow-moving clouds."
+                                    "How peaceful it would be to just not hurt for 10 minutes."
+                                    "Sitting up, I transformed back into my humanoid form."
+                                    "Rubbing my arm, as it was the side of the most force, I braced my future self for severe bruising."
+                                    "Looking around, my eyes found a cave not too far from where I sat."
+                                    "Its gaping mouth revealed an inky blackness that within that, a small trail of glowing lights appeared."
+                                    "Curious as to how lights could randomly just apear in a small line like that, I stood up slowly, feeling for any increasing pain as I got up from the ground."
+                                    "After checking myself for any signs of a fracture or a broken bone, I gave a small cheer."
+                                    m "\"Crawler did mention strong bones at some point, I guess this is where it applies.\""
+                                    "My smile faded quickly as I approached the cave, my gaze fixated on the tiny lights."
+                                    "Looking closer, they were suprisingly small rounded pebbles that I assumed were laid out."
+                                    "They shined brightly against the half-wet stone, illuminating the dark cave space."
+                                    "Not even a moment passes before I feel a hand cover my face."
+                                    y "\"Shhhhh, I mean no harm. Just, don't make any niose. Let's go further into the cave, we can talk there.\""
+                                    "I couldn't place who's voice this was, but I knew it was from somewhere."
+                                    "Trusting the person, I allowed them to drag me futher into the unknown."
+                                    q "Sample ends."
+                                    jump credits
                                     
                 "Know that the head of Zerithin would be outraged if they found out":
-                    "Test"
-
-    
-
-    scene bg room
-
-    show eileen happy
-
-    "You've created a new Ren'Py game."
-
-    "Once you add a story, pictures, and music, you can release it to the world!"
+                    "Remembering the monitors in the halway, I realized that if the head of Zerithin caught me, they would be downright-angry."
+                    "Oh, and I mean,   A  N  G  R  Y  ,"
+                    "I had attacked a  former worker during an attempt to escape the facility and I had been put on probation for at least a month."
+                    "I could still hear the head's voice in my head, even though that was like, a couple months ago."
+                    "Shaking my head, I shut the door with a flick of my tail and headed on my way towards my room."
+                    "Striding inside, I found Crawler by my bed looking intently on his tablet."
+                    "Clearing my throat, Crawler looked up, almost dropping his tablet when he saw me."
+                    c "\"Oh! Subject 185! \""  
+                    c "\"I would've expected you to take longer, but I guess my assumptions were wrong.\""
+                    "I lowered my eyebrows in exasperation."
+                    m "\"I Don't know why I've been able to tolerate you for so longm but get a move on will you?\""
+                    c "\"Ouch, well that hurt. Alright then if you want me to 'get a move on.'\""
+                    c "\"Anyways, we're {i}not{/i} doing another muscle-test training today, instead we'll be doing an instinctual predatory-sense test.\""
+                    c "\"We have to make sure your Hybrid vitals are all up and healthy.\""
+                    c "\"Otherwise, it might call for some brain-implant refining.\""
+                    "With a few more taps on his tablet, he guided me towards the training room, all set for my training session."
+                    q "Sample ends."
+                    jump credits
 
     return
