@@ -19,34 +19,33 @@ default pathd = False
 label start:
     $ player_name = ""
     play music "Tune_Leaps.mp3"
-    $ player_name = renpy.input("Please input a username. Please note that this name will be used throughout the entire visual novel:") 
-    q "As this is a small sample, this was made under the span of two weeks, which is clearly not ideal to make a quality product."
+    $ player_name = renpy.input("Please input a username. Please note that this name will be used throughout the entire visual novel:")
     show filler-sprite
-    
-    
-    
+    q "As this is a small sample, this was made under the span of two weeks, which is clearly not ideal to make a quality product."
     q "Because of that, a donation of at least $500000000000000000 is {i}{b}{u}REQUIRED{/i}{/b}{/u} to view the content shown to you know. Failure to comply with the tax will put you in federal prison. (-Jason, the programmer of this visual novel.)"
-    hide filler-sprite
+
     q "Ehem, aside from the point, because of the time constraint put upon us, the product you see below may not be the best quality it could be."
     q "Thank you for understanding, now let us introduce you to the characters."
-    q "You will be placed in the shoes of a character named Dorine Finch, known as Subject 185. but as this should be a customizable experience, you can enter the name of what you want to go by in this simulation."
+    q "You will be placed in the shoes of a character named Dorine Finch, known as Subject 185, but as this should be a customizable experience, you can enter the name of what you want to go by in this simulation."
     q "For example here, let's see an example slide."
     m "\"Hey, this is what the template looks like :D\""
     q "As you can see, your inputted name is set to the upper hand corner, and although you won't be called by the name of whatever you inputted, you might see some sneak peaks later if you choose to support me and my friends on our universe-building journey."
     q "Let us carry on now."
-    q "You are set in the yaer 2122. Only 19 years before, mankind seeked to create a specialized kind of \"human\" that had access to powers the average human could not possess."
+    q "You are set in the year 2122. Only 19 years before, mankind seeked to create a specialized kind of \"human\" that had access to powers the average human could not possess."
     q "The secret organization that created these \"humans\" goes by the name of Zerithin. They classify this project as 2103: Avrin, 2103 being the year these so called avrins were created."
     q "Subject 185 is one of the first naturally-born Hybrids, a class of avrin that is able to shapeshift into a creature, whether it be an already existing species or a completely unique creature."
     q "Crawler (male), a character you'll meet shortly, is a scientist for Zerithin."
-    q "Subject 130, an individual that is identified with the name Brillin Helene (male), is a modified human, meanin that his avrin status was male through unnatural methods. he is categorized under the avrin status of Telepath."
-    q "Subject 163, whose name is Orion Isorceli (male), is a naturally-born Self-Healer, meaning he goes under the category of Healer, except his abolities only go to self-healing; healing himself."
-    q "Lastly, we have Subject 124, Aidite Espen (female), who was a detective Photokini, a short term for an avrin that has Photokinesis abilities (the ablity to bend light (without mirrors or any reflective surface of course.))"
+    q "Subject 130, an individual that is identified with the name Brillin Helene (male), is a modified human, meaning that his avrin status was male through unnatural methods. He is categorized under the avrin status of Telepath."
+    q "Subject 163, whose name is Orion Isorceli (male), is a naturally-born Self-Healer, meaning he goes under the category of Healer, except his abilities only go to self-healing; healing himself."
+    q "Lastly, we have Subject 124, Aidite Espen (female), who was a defective Photokini, a short term for an avrin that has Photokinesis abilities (the ablity to bend light (without mirrors or any reflective surface of course.))"
     
     q "Now that you have some background info on our story universe and the characters you'll encounter, let's jump right into the actual product."
+    hide filler-sprite
     # heheh flashy uwu
 
     a "System booting: Subject 185. Status: Awakening."
     "I awoke to the familiar buzzing of the facility."
+    scene bedroom with pixellate
     "Trying to ignore the faint buzzing, I shifted as much as I could on the hard mattress, my body aching from the intense muscle-test training I had done the day before."
     "This had been the 5th time they had done the experiments and I was getting TIRED of it, especially because I would always end up passing out or get stuck with a horrible migrane."
     "Unable to sleep because of my light-sleeper issues, I groaned and resigned by turning my head towards the electro-cuffs, 4 in total, one at the end of each limb."
@@ -59,6 +58,7 @@ label start:
     "Looking into the mirror, I saw a disheartened individual, the color slowly draining out of their face as every day passed with suffering."
     "But what could they do when they were stuck miles in the middle of nowhere?"
     "Shaking my head, I ventured towards the door of my room."
+    scene hallway
     menu:
                 "Taking a hold of my doorknob, I opened the door and stumbled out into the hallway, deciding upon two choices I could take."
                 
@@ -66,28 +66,36 @@ label start:
                     "I closed my eyes and relied on my sense of hearing and scent to guide me to the cafeteria."
                     "Only when I turned a corner did I bump into something- or rather {i}someone.{/i}"
                     # Black sprite shakes and jolts
+                    show menacing with vpunch
                     "I wrinkled my nose and looked up to see Crawler's annoyingly radiant smiling face at me."
+                    hide menacing with hpunch
+                    show crawler
                     c "\"Oh hey, Subject 185!\""
                     c "\"Good to see that you're out and about. I didn't think anybody was here in the corridors, seemed all too quiet, but it sure seems that the training you've been doing is paying off,\" he winked at me."
                     m "I looked away, giving a small shrug."
                     c "\"Well, meet me back at your room after you've eaten and I'll come fetch you for your training.\" He patted my shoulder comfortingly."
-                    c "\"I'm currently trying to adjust your training system.\" he mumured gently. \"I know how much you hate the way the boss does things around here.\""
+                    c "\"I'm currently trying to adjust your training system,\" He murmured gently. \"I know how much you hate the way the boss does things around here.\""
                     c "\"Well, off to breakfast you go!\" With that, he turned his back and left me alone in the facility hallway, on my way to breakfast."
                 "Walk down the hallway as usual":
-                    "Choosing not to make a fool of myself again, I put my hands in my pocket and made my way through the winding complex, now in a slightly more irritated stance."
+                    "Choosing not to make a fool of myself, I put my hands in my pocket and made my way through the winding complex, now in a slightly more irritated stance."
                     "My steps pattered against the metal floor, the echos rattling inside my brain like those rubbery bouncy balls that people played with all the way in the '19s."
                     "A shiver crawled down my spine, creeping to the tip of my tail as the faint memories of the {i}incident{/i} darted into my conciousness."
+                    scene redbackground with hpunch
                     # *short moment, flashes of red (not neccisarily blood lmao) and hazy vision, shaking screen, jolting*
+                    scene hallway with pixellate
                     "Feeling my body tremble, I forced myself to push away the violent moments, knowing it was better to leave untouched."
                     "Dragging myself down the hall, I closed my eyes for a brief moment and took a deep breath for every thought that harmed my mind."
                     m "\"It's alright, just forget about it. It doesn't matter now..\""      
                     
     play music "doneee.mp3"
+    scene cafeteria
     "Finally seeing the entrance of the dining hall, I walked in to 163 shoving his face with weird green mush, whilst 130 sat there, facing me as I showed myself."
     # Have Subject 130 come into the left, and then:
+    show filler-sprite at left with easeinright
     suba "\"Welcome 185. I was expecting you.\""
     suba "\"I could hear your relenting thoughts from down the corridor.\""
     # Have Subject 163 come in from the left heheheh
+    show orion at right with easeinleft
     subb "\"Morning,\" he greeted, the food in his mouth muffling his voice. I nodded to make sure he knew I heard his greeting,"
     m "\"Well it's certainly been a bit of a boring morning, but I'm glad you're always here to eavesdrop,\" I teased, smiling as I saw the expression on 130's face."
     suba "\"Why, you know I can't control it, otherwise I would've stayed out of your thoughts, or would I?\""
@@ -104,6 +112,9 @@ label start:
                     "Finishing up, I scraped the rest of the oatmeal off my bowl and into my mouth, placing my dish into the sink."
                     "Taking one last look at the duo, I walk away, heading towards my room."
                 "Try to start a conversation with 130":
+                    hide filler-sprote
+                    hide orion
+                    show filler-sprite with fade
                     # 130 Pained
                     "Pushing myself togo talk to 130, I lifted my head, only to see 130's eyes start flickering in their sockets."
                     m "\"130, you alright?\""
@@ -119,11 +130,11 @@ label start:
                     subb "I waved my farewells to 163 before putting away my dish and leaving the vicinity."
                 "Tease 163 for geting more food after shoving his face full of food":
                     "I observed as 163 got up from his seat to grab yet another bowl of oatmeal."
-                    m "\"Are you actually getting another bowl of oatmeal? That's like your third one this morning.\""
+                    m "\"Are you actually getting another bowl of oatmeal?"
                     m "\"That's like your third one this morning.\""
                     # shrug sprite
-                    subb "He shrugs."
-                    m "\"Oh alright then. I'll get going, Got to get to training with Crawler.\""
+                    m "He shrugs."
+                    m "\"Oh alright then. I'll get going. Got to get to training with Crawler.\""
                     "Standing up, I grabbed my bowl and put it in the sink before saying my farewells."
                 "Ask where Subject 124 has been":  # PATH D
                     $pathd = True
@@ -132,11 +143,12 @@ label start:
                     m "\"Have y'all seen where 124 has been? I havent seen her for at least a week now.\""
                     # 130 neutral sprite
                     "130 seemed deep in thought."
-                    suba "\"I don't think I've heard her usual anxious thoughts around, though my mind is definitely clearer without her.\""
+                    suba "\"I don't think I've heard her usual rumbling thoughts around, though my mind is definitely clearer without her.\""
                     m "I scoff."
                     m "\"When I find her, I'm definitely telling her that.\""
                     suba "\"You better not.\""
                     m "\"No promises!\" I exclaimed as I dumped my bowl into the sink and left."
+    scene hallway
     "Walking into the hallway, I'm approached by a security bot."
     "It stood tall above me, turning its head down to scan me."
     s "\"Halt. Starting a scan.\""
@@ -147,6 +159,8 @@ label start:
                 "Passing through the same hallway I did about 10 minutes ago, I realize a door was left open where it wasn't before."
                 
                 "Check it out":
+                    scene staircase
+                    play music "Suspense.mp3"
                     "Scanning the perimeters of my door, I peered my head into the area, only to find a big room with a staircase that went on past my vision."
                     "Familiarizing myself with the area, I remembered trespassing into a place like this before."
                     "Memories of trying to escape the suffocating facility of Zerithin whirred in my mind, being monitored all-day and all-night after my escape attempt."
@@ -183,6 +197,7 @@ label start:
                     "{i}I can't get caught! Security is going to start coming after me soon!{/i}"
                     "Pounding against the metal trapdoor, I could feel the metal start to give in."
                     "Starting to hear the shouts from the bottom of the stairs, I broke through the door, scrambling desperately through the hole in the metal, catching a whiff of the crisp breeze."
+                    scene cliff
                     "The familiar scenery of green filled my vision, a tall fuzzy line of trees lining the distance."
                     "A safe feeling washed over me before I snapped back to reality."
                     m "\"Hide hide hide... But there's only grass-\""
@@ -192,6 +207,7 @@ label start:
                                 "Thinking about how I was weakened by my symptoms and about the time that was ticking away, I started to enter a state of panic."
                                 
                                 "Get to the trees as fast as possible":
+                                    scene grass
                                     "Deciding that my best option was to get to the trees, I sprinted. Or at least I tried to."
                                     "Adrenaline trudged through my veins, making me rush when my body was already weak, causing me to stumble."
                                     "I knew that I was gonna fall, my muscles would give up on me soon and I would lay there like dead prey, waiting to be picked off by the crows."
@@ -228,9 +244,10 @@ label start:
                                     "After checking myself for any signs of a fracture or a broken bone, I gave a small cheer."
                                     m "\"Crawler did mention strong bones at some point, I guess this is where it applies.\""
                                     "My smile faded quickly as I approached the cave, my gaze fixated on the tiny lights."
+                                    scene darkcave
                                     "Looking closer, they were suprisingly small rounded pebbles that I assumed were laid out."
                                     "They shined brightly against the half-wet stone, illuminating the dark cave space."
-                                    "Not even a moment passes before I feel a hand cover my face."
+                                    "Not even a moment passes before I feel a hand cover my mouth."
                                     y "\"Shhhhh, I mean no harm. Just, don't make any niose. Let's go further into the cave, we can talk there.\""
                                     "I couldn't place who's voice this was, but I knew it was from somewhere."
                                     "Trusting the person, I allowed them to drag me futher into the unknown."
@@ -239,13 +256,15 @@ label start:
                                     
                 "Know that the head of Zerithin would be outraged if they found out":
                     "Remembering the monitors in the halway, I realized that if the head of Zerithin caught me, they would be downright-angry."
-                    "Oh, and I mean,   A  N  G  R  Y  ,"
+                    "Oh, and I mean,  A N G R Y."
                     "I had attacked a  former worker during an attempt to escape the facility and I had been put on probation for at least a month."
-                    "I could still hear the head's voice in my head, even though that was like, a couple months ago."
+                    "I could still hear the head's voice in my mind, even though that was like, a couple months ago."
                     "Shaking my head, I shut the door with a flick of my tail and headed on my way towards my room."
-                    "Striding inside, I found Crawler by my bed looking intently on his tablet."
+                    scene bedroom
+                    show crawler
+                    "Striding inside, I found Crawler by my bed looking intently at his tablet."
                     "Clearing my throat, Crawler looked up, almost dropping his tablet when he saw me."
-                    c "\"Oh! Subject 185! \""  
+                    c "\"Oh! Subject 185!\""  
                     c "\"I would've expected you to take longer, but I guess my assumptions were wrong.\""
                     "I lowered my eyebrows in exasperation."
                     m "\"I Don't know why I've been able to tolerate you for so longm but get a move on will you?\""
