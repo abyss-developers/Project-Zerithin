@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define m = Character("[player_name]",  color="#1b77ee")
+define m = Character("  [player_name]  ",  color="#1b77ee")
 define a = Character("{b}Archo2{/b}",  color="#1b77ee")
 define s = Character("{b}Security Bot{/b}",  color="#1b77ee")
 define c = Character("Crawler",  color="#bff3d6")
@@ -33,11 +33,12 @@ label start:
     q "Let us carry on now."
     q "You are set in the year 2122. Only 19 years before, mankind seeked to create a specialized kind of \"human\" that had access to powers the average human could not possess."
     q "The secret organization that created these \"humans\" goes by the name of Zerithin. They classify this project as 2103: Avrin, 2103 being the year these so called avrins were created."
-    q "Subject 185 is one of the first naturally-born Hybrids, a class of avrin that is able to shapeshift into a creature, whether it be an already existing species or a completely unique creature."
+    q "Subject 185 is one of the first naturally-born Hybrids, a class of avrin that is able to shapeshift into a creature, whether it be an already existing species or a completely unique creature in the universe I created, Xephia."
     q "Crawler (male), a character you'll meet shortly, is a scientist for Zerithin."
-    q "Subject 130, an individual that is identified with the name Brillin Helene (male), is a modified human, meaning that his avrin status was male through unnatural methods. He is categorized under the avrin status of Telepath."
+    q "Subject 130, an individual that is identified with the name Brillin Helene (male), is a modified human, meaning that his avrin status was made through unnatural methods. He is categorized under the avrin status of Telepath."
     q "Subject 163, whose name is Orion Isorceli (male), is a naturally-born Self-Healer, meaning he goes under the category of Healer, except his abilities only go to self-healing; healing himself."
     q "Lastly, we have Subject 124, Aidite Espen (female), who was a defective Photokini, a short term for an avrin that has Photokinesis abilities (the ablity to bend light (without mirrors or any reflective surface of course.))"
+    q "She may or may not appear depending on the choices you make."
     
     q "Now that you have some background info on our story universe and the characters you'll encounter, let's jump right into the actual product."
     hide filler-sprite
@@ -112,16 +113,16 @@ label start:
                     "Finishing up, I scraped the rest of the oatmeal off my bowl and into my mouth, placing my dish into the sink."
                     "Taking one last look at the duo, I walk away, heading towards my room."
                 "Try to start a conversation with 130":
-                    hide filler-sprote
+                    hide filler-sprite
                     hide orion
                     show filler-sprite with fade
                     # 130 Pained
-                    "Pushing myself togo talk to 130, I lifted my head, only to see 130's eyes start flickering in their sockets."
+                    "Pushing myself to go talk to 130, I lifted my head, only to see 130's eyes start flickering in their sockets."
                     m "\"130, you alright?\""
                     suba "\"Yeah, freaking stupid, glitchy tech augs.\""
                     m "\"Tech augs? I thought Zerithin already moved on to more natural methods like gene manipulation and specifically developed fluids, instead of tech.\""
                     suba "\"No- Sorry, wrong word. I just like to blame the tech augs, the one time I was assigned the use of those little pieces of trash was for a experimentation that ended in failure.\""
-                    suba "\"To put it simply, they wer too hurtful that they rendered me unconscious.\""
+                    suba "\"To put it simply, they were so hurtful that they rendered me unconscious.\""
                     suba "\"But anyways, the fluids they've been injecting into my body have been giving me bad headaches and apparently a symptom of flickering eyes.\""
                     suba "He massaged his temples, wrinkles forming on his forehead. Deciding that I should probably leave 130 in peace, I pick up my bowl and stand up."
                     m "\"I'm going to get going. Crawler told me to get back to my room for training so I better get to that. Gonna be horrible, but oh well I guess. Bye 130, 163.\""
@@ -232,7 +233,7 @@ label start:
                                     "Taking a leap of faith, I jumped off the edge and plummeted for a couple seconds until the wind caught my wings and I soared."
                                     "I aimed myself towards the little margin of land wrapping the cliff bottom."
                                     "Right then and there, my side burst into an excruciating pain."
-                                    "Before I could stop myself from faling, my body crashed into the land below, thudding into the cold rock."
+                                    "Before I could stop myself from falling, my body crashed into the land below, thudding into the cold rock."
                                     "Clecnching my jaws together, I cursed in my mind."
                                     "Just lying there for a moment to catch my breath, I stared at the slow-moving clouds."
                                     "How peaceful it would be to just not hurt for 10 minutes."
@@ -248,8 +249,8 @@ label start:
                                     "Looking closer, they were suprisingly small rounded pebbles that I assumed were laid out."
                                     "They shined brightly against the half-wet stone, illuminating the dark cave space."
                                     "Not even a moment passes before I feel a hand cover my mouth."
-                                    y "\"Shhhhh, I mean no harm. Just, don't make any niose. Let's go further into the cave, we can talk there.\""
-                                    "I couldn't place who's voice this was, but I knew it was from somewhere."
+                                    y "\"Shhhhh, I mean no harm. Just, don't make any noise. Let's go further into the cave, we can talk there.\""
+                                    "I couldn't place who's voice this was, but I knew it was familiar."
                                     "Trusting the person, I allowed them to drag me futher into the unknown."
                                     q "Sample ends."
                                     jump credits
@@ -267,7 +268,7 @@ label start:
                     c "\"Oh! Subject 185!\""  
                     c "\"I would've expected you to take longer, but I guess my assumptions were wrong.\""
                     "I lowered my eyebrows in exasperation."
-                    m "\"I Don't know why I've been able to tolerate you for so longm but get a move on will you?\""
+                    m "\"I don't know how I've been able to tolerate you for so long but get a move on will you?\""
                     c "\"Ouch, well that hurt. Alright then if you want me to 'get a move on.'\""
                     c "\"Anyways, we're {i}not{/i} doing another muscle-test training today, instead we'll be doing an instinctual predatory-sense test.\""
                     c "\"We have to make sure your Hybrid vitals are all up and healthy.\""
